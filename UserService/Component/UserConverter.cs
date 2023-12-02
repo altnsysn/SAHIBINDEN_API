@@ -14,5 +14,11 @@ namespace UserService.Component
             }
             return ret;
         }
+
+        public User SingUpDtoToUser(UserSingUpDTO singUpDTO)
+        {
+            return new User {Id=3,Name=singUpDTO.userName,Email=singUpDTO.email,Password=singUpDTO.password };
+        }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using UserService.Dto;
+using UserService.Entity;
 using UserService.Repository.Interface;
 using UserService.Service.Interface;
 
@@ -16,6 +17,11 @@ namespace UserService.Service.Service
         public List<UserDTO> GetUsers()
         {
             return userRepository.GetAllUser();
+        }
+
+        public User SingUp(UserSingUpDTO singUpDTO)
+        {
+            return userRepository.AddNewUser(singUpDTO);
         }
 
         public string Test()

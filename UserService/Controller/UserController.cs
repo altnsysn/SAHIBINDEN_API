@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using UserService.Dto;
 using UserService.Service.Interface;
 
 namespace UserService.Controller
@@ -25,5 +26,13 @@ namespace UserService.Controller
         {
             return Ok(_userService.GetUsers());
         }
+
+
+        [HttpPost("singup")]
+        public IActionResult SingUpUser([FromBody] UserSingUpDTO singUpDTO)
+        {
+            return Ok(_userService.SingUp(singUpDTO));
+        }
+
     }
 }

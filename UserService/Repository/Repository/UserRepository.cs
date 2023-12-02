@@ -22,5 +22,12 @@ namespace UserService.Repository.Repository
         {
             return userConverter.UserToUserDTO(users);
         }
+
+        public User AddNewUser(UserSingUpDTO singUpDTO)
+        {
+            var user = userConverter.SingUpDtoToUser(singUpDTO);
+            users.Add(user);
+            return user;
+        }
     }
 }

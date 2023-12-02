@@ -1,4 +1,5 @@
 ﻿using UserService.Dto;
+using UserService.Entity;
 
 namespace UserService.Service.Interface
 {
@@ -7,5 +8,7 @@ namespace UserService.Service.Interface
         string Test();
 
         List<UserDTO> GetUsers();
+
+        User SingUp(UserSingUpDTO singUpDTO);
     }
 }
